@@ -1,4 +1,5 @@
 camel = r"""
+The camel habitat...
  ___.-''''-.
 /___  @    |
 ',,,,.     |         _.'''''''._
@@ -16,8 +17,9 @@ camel = r"""
             ; ;    ! !    ! !     ; ;
            ;,,      !,!   !,!     ;,;
            /_I      L_I   L_I     /_I
-"""
+Look at that!"""
 lion = r"""
+The lion habitat...
                                                ,w.
                                              ,YWMMw  ,M  ,
                         _.---.._   __..---._.'MMMMMw,wMWmW,
@@ -32,8 +34,9 @@ WMMm__,-'.'     /      _.\      F'''-+,,   ;_,_.dMMMMMMMM[,_ / `=_}
           /  .'             /  (       .'  /     Ww._     `.  `"
          /  Y,              `,  `-,=,_{   ;      MMMP`""-,  `-._.-,
         (--, )                `,_ / `) \/"")      ^"      `-, -;"\:
-"""
+The lion is roaring!"""
 deer = r"""
+The deer habitat...
    /|       |\
 `__\\       //__'
    ||      ||
@@ -58,8 +61,9 @@ deer = r"""
            | || |           | |   | |
            |_||_|           |_|   |_|
           /_//_/           /_/   /_/
-"""
+Pretty good!"""
 goose = r"""
+The goose habitat...
                                     _
                                 ,-"" "".
                               ,'  ____  `.
@@ -71,8 +75,9 @@ goose = r"""
   <`-       (__< <           :
    (__        (_<_<          ;
     `------------------------------------------
-"""
+Beautiful!"""
 bat = r"""
+The bat habitat...
 _________________               _________________
  ~-.              \  |\___/|  /              .-~
      ~-.           \ / o o \ /           .-~
@@ -84,8 +89,9 @@ _________________               _________________
            /___      /\   /\      ___\
                 ~-. /  \_/  \ .-~
                    V         V
-"""
+It's doing fine."""
 rabbit = r"""
+The rabbit habitat...
          ,
         /|      __
        / |   ,-~ /
@@ -105,8 +111,10 @@ rabbit = r"""
  l       I     !
  ]\      _\    /"\
 (" ~----( ~   Y.  )
-"""
+It looks fine!"""
 animals = [camel, lion, deer, goose, bat, rabbit]
-number_animal = input("Please enter the number of the habitat you would like to view (1-6): ")
-print(animals[int(number_animal)-1])
-print("You've reached the end of the program.")
+number_animal = input("Please enter the number of the habitat you would like to view (1-6) (or type exit): ")
+while number_animal != "exit" and int(number_animal) >= 1 and int(number_animal) <= 6:
+    print(animals[int(number_animal)-1])
+    number_animal = input("Please enter the number of the habitat you would like to view (1-6) (or type exit): ")
+print("See you later!")
